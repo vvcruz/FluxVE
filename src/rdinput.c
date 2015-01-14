@@ -3,7 +3,7 @@
 #include<math.h>
 #include<string.h>
 
-int rdinput(FILE *arq,int *nx, int *ny, double *xi, double *xf, double *yi, double *yf,char *file,int *stfil,int *endfil, double *ti, double *tf, double *m1, double *m2, double *fluxline, char *axis, double *nv, int *nf, double *stepxspl, double *stepyspl, int *twopow,double *a, double *x0, double *k0, double *Evib, double *potshift, int *prtRMSwhole, int *type, int *noreg, double *ma, double *mb, double *mc, int *wholegrid, double *stren, double t0){
+int rdinput(FILE *arq,int *nx, int *ny, double *xi, double *xf, double *yi, double *yf,char *file,int *stfil,int *endfil, double *ti, double *tf, double *m1, double *m2, double *fluxline, char *axis, double *nv, int *nf, double *stepxspl, double *stepyspl, int *twopow,double *a, double *x0, double *k0, double *Evib, double *potshift, int *prtRMSwhole, int *type, int *noreg, double *ma, double *mb, double *mc, int *wholegrid, double *stren, double *t0){
   int i,j,k,spl;
   int NXG,NYG,jcheck1,jcheck2;
   char workk[50],coment[150],typenam[20];

@@ -111,6 +111,7 @@ int main(){
   //conversion below used in eSPec
 
   //heaviside window center
+  printf("LOL 2 %lf %lf \n",stren,t0);
   if(t0 == 0.0e+0) t0 = tf - 0.15 * (tf - ti); 
   t0 = FSAU(t0);
 
@@ -575,6 +576,8 @@ int main(){
   printf("\nchanging stepx to %E\n",stepx);
   printf("\nchanging stepy to %E\n",stepy);
 
+  fprintf(probf,"#    Collision Energy  ,   Probability  \n");
+
   for(k=0;k<nE;k++){
 
     if(E[k] >= Emin && E[k] <= Emax){
@@ -597,7 +600,7 @@ int main(){
 	maxF[0] = E[k];
       }
       //-------probf
-      fprintf(probf,"%E %E \n",E[k],Prob);
+      fprintf(probf,"%E %E \n", 27.2114*(E[k] - Evib - potshift),Prob);
       fprintf(deb,"%E %E %E %E \n",pk,aE*aE,(pk/m1)*flux,Prob);
       printf("%E %E %E %E \n",E[k],(m1/pk)*aE*aE,flux,Prob);
     }
