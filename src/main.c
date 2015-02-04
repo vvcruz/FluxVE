@@ -82,7 +82,7 @@ int main(){
   stren = 1.5e-3;
   twopow=9; //11;
   width = 1.0e-9;
-  kx=6.0e+0;
+  kx=8.0e+0;
   prtwpE=1; // =0 to print transformed wp into files -> NEED TO ADD TO rdinput
   prtRMSwhole=1; // = 0 to compute RMSE in relation to whole data -> NEED TO ADD TO rdinput
 

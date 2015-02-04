@@ -64,7 +64,13 @@ int gendata_complex(fftw_complex *work, double *bcoefre, double *bcoefim, double
     //window = exp(-pow((t - tmax)/taux,2));
     //window = 1.0/(1.0 + exp(-2.0*0.01*(t - tmax - 100)));
     //window = exp(-pow((t - tmax)/taux,2*m));
+
+    //box gaussian window
+    //window = exp(-pow((t - t0)/stren,2*m));
+
+    //heaviside window
     window = 1.000 - 1.000/(1 + exp(-2.0*stren*(t - t0)));
+
     //fprintf(wind,"%E %E\n",t,window);
     //window = 1.0000e+0;
     work[i][0] = window*dbs3vl_ (&y,&x,&t,&kx,&kx,&kx,yknot,xknot,tknot,&nyr,&nxr,&nf,bcoefre);
